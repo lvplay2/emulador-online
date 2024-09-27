@@ -38,6 +38,7 @@
             button {
                 color: white;
                 font-family: "Roboto", sans-serif;
+                align-content: center;
                 background-color: black;
                 border: 2px solid white;
                 border-radius: 16px;
@@ -56,6 +57,7 @@
         <div id="box" style="text-align: center; padding-top: 20px;">
             <h1>Emulador Online</h1>
             <p>¡Sube aquí roms de juegos y ejecútalos con emulatorjs!</p>
+            <p>Este emulador puede correr juegos de PS1, Arcade, NES, DS, N64, Game Boy, Atari y más!</p>
             <input type="file" id="input">
         </div>
 
@@ -95,14 +97,23 @@
                             "Nintendo Game Boy": "gb",
                             "Nintendo Game Boy Advance": "gba",
                             "Nintendo DS": "nds",
-                            "Nintendo Entertainment System": "nes",
-                            "Super Nintendo Entertainment System": "snes",
-                            "PlayStation 1": "psx",
+                            "NES": "nes",
+                            "SNES": "snes",
+                            "PS1": "psx",
                             "Virtual Boy": "vb",
                             "Sega Mega Drive": "segaMD",
                             "Sega Master System": "segaMS",
                             "Sega CD": "segaCD",
                             "Atari Lynx": "lynx",
+                            "Commodore 64": "c64",
+                            "Commodore 128": "c128",
+                            "Commodore Amiga": "amiga",
+                            "Commodore PET": "pet",
+                            "Commodore Plus/4": "plus4",
+                            "Commodore VIC-20": "vic20",
+                            "Arcade": "arcade",
+                            "3DO": "3do",
+                            "MAME 2003": "mame2003",
                             "Sega 32X": "sega32x",
                             "Atari Jaguar": "jaguar",
                             "Sega Game Gear": "segaGG",
@@ -132,7 +143,7 @@
                         }
 
                         button.onclick = () => resolve(select[select.selectedIndex].value)
-                        button.textContent = "Cargar juego"
+                        button.textContent = "Load game"
                         box.innerHTML = ""
 
                         box.appendChild(select)
@@ -176,6 +187,7 @@
             box.ondragover = () => box.setAttribute("drag", true);
             box.ondragleave = () => box.removeAttribute("drag");
         </script>
-        <h4>(Hecho por Mati555)</h4>
+        <h4>(Código original hecho por a456pur para Seraph. Código transformado por Mati555.)</h4>
+        </div>
     </body>
 </html>
