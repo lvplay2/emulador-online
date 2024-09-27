@@ -1,28 +1,23 @@
 <html>
     <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-7FN7LEVWXD');
-        </script>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>EmulatorJS | Seraph</title>
-        <link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon">
-        <script src="../../storage/js/cloak.js"></script>
-        
+         <meta name="viewport" content="width=device-width, initial-scale=1" />
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Emulador Online</title>
         <style>
-            @font-face {
-                font-family: 'Main';
-                src: url('../../storage/fonts/ubuntu/Ubuntu.woff2') format('woff2'),
-                    url('../../storage/fonts/ubuntu//Ubuntu.woff') format('woff'),
-                    url('../../storage/fonts/ubuntu/Ubuntu.ttf') format('ttf'),
-                    url('../../storage/fonts/ubuntu/Ubuntu.otf') format('otf');
+            h1 {
+                font-family: "Roboto", system-ui;
+                text-align: center;
             }
-
+            p {
+                font-family: "Roboto", system-ui;
+                text-align: center;
+            }
+            h4 {
+                font-family: "Roboto", system-ui;
+                text-align: center;
+            }
             body {
                 margin: 0;
                 padding: 0;
@@ -42,7 +37,7 @@
 
             button {
                 color: white;
-                font-family: 'Main', sans-serif;
+                font-family: "Roboto", sans-serif;
                 background-color: black;
                 border: 2px solid white;
                 border-radius: 16px;
@@ -54,21 +49,13 @@
                 padding-top: 20px;
             }
 
-            h1 {
-                font-size: 48px;
-            }
-
-            p {
-                font-size: 20px;
-            }
-
         </style>
     </head>
 
     <body>
         <div id="box" style="text-align: center; padding-top: 20px;">
-            <h1 style="font-family: 'Main';">emulatorjs upload</h1>
-            <p style="font-family: 'Main';">upload game roms here and run them using emulatorjs!</p>
+            <h1>Emulador Online</h1>
+            <p>¡Sube aquí roms de juegos y ejecútalos con emulatorjs!</p>
             <input type="file" id="input">
         </div>
 
@@ -169,10 +156,10 @@
                 window.EJS_biosUrl = "";
                 window.EJS_gameUrl = url;
                 window.EJS_core = core;
-                window.EJS_pathtodata = "../../storage/emulatorjs/data";
+                window.EJS_pathtodata = "/data";
                 window.EJS_startOnLoaded = true;
 
-                script.src = "../../storage/emulatorjs/data/loader.js";
+                script.src = "/data/loader.js";
                 document.body.appendChild(script);
             }
             function detectAdBlock(url) {
@@ -189,5 +176,6 @@
             box.ondragover = () => box.setAttribute("drag", true);
             box.ondragleave = () => box.removeAttribute("drag");
         </script>
+        <h4>(Hecho por Mati555)</h4>
     </body>
 </html>
