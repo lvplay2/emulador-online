@@ -1,0 +1,124 @@
+<html>
+    <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1" />
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>FAQ</title>
+        <style>
+            details {
+            margin-bottom: 10px;
+            font-family: "Roboto", system-ui;
+            text-align: center;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        }
+            summary {
+            cursor: pointer;
+            font-weight: bold;
+            font-family: "Roboto", system-ui;
+            text-align: center;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        }
+            .caja {
+                color: white;
+                font-family: "Roboto", sans-serif;
+                align-content: center;
+                background-color: black;
+                border: 2px solid white;
+                border-radius: 16px;
+        }
+            h1 {
+                color: black;
+                font-family: "Roboto", system-ui;
+                text-align: center;
+            }
+            p {
+                font-family: "Roboto", system-ui;
+                text-align: center;
+                text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            }
+            h4 {
+                font-family: "Roboto", system-ui;
+                text-align: center;
+                text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            }
+            a {
+                font-family: "Roboto", system-ui;
+                color: white;
+                text-align: center;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                color: white;
+                background-size: cover;
+                background-repeat: no-repeat;
+                animation: fadeIn 2s forwards, slideUp 2s forwards;
+                animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { background-color: black; }
+            100% { background-color: white; }
+        }
+
+        .content {
+            position: relative;
+            animation: slideUp 2s forwards;
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(0); }
+        }
+            .box {
+                font-family: 'Main';
+                text-align: center;
+                padding-top: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="content" id="box" style="text-align: center; padding-top: 20px;">
+            <h1 class="caja">Preguntas y Respuestas</h1>
+            <details>
+                <summary>¿Cómo funciona esta página?</summary>
+                <p>La página nada más le manda la rom que vos elijas</p>
+                <p>al emulador EmulatorJS y el emulador corre el juego.</p>
+            </details>
+            <details>
+                <summary>¿Esto es open source?</summary>
+                <p>Sí, el código fuente se encuentra</p><a href="https://github.com/lvplay2/emulador-online">aquí.</a>
+            </details>
+            <details>
+                <summary>¿Esta página tiene juegos gratis?</summary>
+                <p>No, hacer un emulador que incluya copias gratis no autorizadas de ROMs es ilegal. Tú mismo debes proporcionar la ROM.</p>
+            </details>
+            <details>
+                <summary>¿De dónde proviene la imagen del fondo?</summary>
+                <p>La imagen proviene del menú de la PS1.</p>
+            </details>
+            <details>
+                <summary>¿Qué consolas puede emular esta página?</summary>
+                <p>El emulador actualmente puede correr roms de Game Boy Advance, NES, Virtual Boy, Game Boy, SNES, Nintendo DS, Nintendo 64, Sega Master System, Sega Mega Drive, Sega Game Gear, Sega Saturn, Sega 32X, Sega CD, Atari 2600, Atari 5200, Atari 7800, Atari Lynx, Atari Jaguar, Commodore 64, Commodore 128, Commodore Amiga, Commodore PET, Commodore Plus/4, Commodore VIC-20, PlayStation 1, Arcade, 3DO, MAME 2003 y ColecoVision.</p>
+            </details>
+            <details>
+                <summary>El emulador me dice "Failed to load game". ¿Qué hago?</summary>
+                <p>Puede ser que la rom esté corrupta, que haya ocurrido un error en el emulador, o que simplemente elegiste un archivo irreconocible para el emulador.</p>
+            </details>
+            <details>
+                <summary>Cuando pongo la ROM me aparece un menú con el botón "Iniciar juego". ¿Qué hago?</summary>
+                <p>Eso pasa porque la ROM tiene un formato de archivo que el emulador no puede reconocer. Ahí tienes que poner de qué consola es la ROM y clickear "Iniciar juego".</p>
+            </details>
+            <a href="https://github.com/lvplay2/emulador-online">Volver al menú principal</a>
+        </div>
+
+        <script>window.onload = function() {
+            var images = ['data/ps1-bios-backgrounds-as-desktop-wallpapers-v0-1sguj62i2hf81.webp', 'data/ps1-bios-backgrounds-as-desktop-wallpapers-v0-nud6ptrg2hf81.webp'];
+            var randomIndex = Math.floor(Math.random() * images.length);
+            document.body.style.backgroundImage = 'url(' + images[randomIndex] + ')';
+        }</script>
+    </body>
+</html>
