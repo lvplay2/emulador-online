@@ -6,29 +6,60 @@
          <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <title>Emulador Online</title>
         <style>
+            .caja {
+                color: white;
+                font-family: "Roboto", sans-serif;
+                align-content: center;
+                background-color: black;
+                border: 2px solid white;
+                border-radius: 16px;
+        }
+            div {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
             h1 {
+                color: black;
                 font-family: "Roboto", system-ui;
                 text-align: center;
             }
             p {
+                color: black;
                 font-family: "Roboto", system-ui;
                 text-align: center;
+                text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
             }
             h4 {
                 font-family: "Roboto", system-ui;
                 text-align: center;
+                text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
             }
             body {
                 margin: 0;
                 padding: 0;
-                background-color: black;
                 color: white;
-                background-image: url('emulatorjs.png');
                 background-size: cover;
                 background-repeat: no-repeat;
-            }
+                animation: fadeIn 2s forwards, slideUp 2s forwards;
+                animation: fadeIn 2s forwards;
+        }
 
+        @keyframes fadeIn {
+            0% { background-color: black; }
+            100% { background-color: white; }
+        }
 
+        .content {
+            position: relative;
+            animation: slideUp 2s forwards;
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(0); }
+        }
             input {
                 background-color: black;
                 color: white;
@@ -54,12 +85,19 @@
     </head>
 
     <body>
-        <div id="box" style="text-align: center; padding-top: 20px;">
-            <h1>Emulador Online</h1>
+        <div class="content" id="box" style="text-align: center; padding-top: 20px;">
+            <h1 class="caja">Emulador Online</h1>
             <p>¡Sube aquí roms de juegos y ejecútalos con emulatorjs!</p>
             <p>¡Este emulador puede correr juegos de PS1, Arcade, NES, DS, N64, Game Boy, Atari y más!</p>
             <input type="file" id="input">
+            <h4>(Código original hecho por a456pur para Seraph. Código transformado por Mati555.)</h4>
         </div>
+
+        <script>window.onload = function() {
+            var images = ['data/ps1-bios-backgrounds-as-desktop-wallpapers-v0-1sguj62i2hf81.webp', 'data/ps1-bios-backgrounds-as-desktop-wallpapers-v0-nud6ptrg2hf81.webp'];
+            var randomIndex = Math.floor(Math.random() * images.length);
+            document.body.style.backgroundImage = 'url(' + images[randomIndex] + ')';
+        }</script>
 
         <script>
             input.onchange = async () => {
@@ -187,7 +225,6 @@
             box.ondragover = () => box.setAttribute("drag", true);
             box.ondragleave = () => box.removeAttribute("drag");
         </script>
-        <h4>(Código original hecho por a456pur para Seraph. Código transformado por Mati555.)</h4>
         </div>
     </body>
 </html>
